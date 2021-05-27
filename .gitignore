@@ -1,0 +1,7 @@
+package-lock.json
+node_modules
+dist/*
+target/*
+
+!dist/output_here.md
+!target/put_target_games_here.md
