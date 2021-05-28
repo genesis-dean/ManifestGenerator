@@ -14,7 +14,7 @@ function genManifestFile ( fileList, folderName ) {
 	// Concat data
 	let output = `# gamedirectory: ${ folderName }\n`;
 	output += `# size: ${ totalSize }\n`;
-	output += `# releasedir: ${ config.releaseDir }\n`;
+	output += `# releasedir: ${ config.releaseDate }\n`;
 	output += `# filecount: ${ fileList.length }\n`;
 	output += `# generatedby: manifestGenerator \n`
 	output += data;
