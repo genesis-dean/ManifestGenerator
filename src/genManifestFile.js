@@ -16,7 +16,7 @@ function genManifestFile ( fileList, folderName ) {
 	output += `# size: ${ totalSize }\n`;
 	output += `# releasedir: ${ config.releaseDate }\n`;
 	output += `# filecount: ${ fileList.length }\n`;
-	output += `# generatedby: manifestGenerator \n`
+	output += `# generatedby: ${ getProjectInfo() } \n`
 	output += data;
 
 	outputPath = `${ OUTPUT_PATH }/${ folderName }`;
@@ -31,6 +31,12 @@ function genManifestFile ( fileList, folderName ) {
 			return console.log( err );
 		}
 	} );
+}
+
+function getProjectInfo () {
+	let projectName = process.env.npm_package_name;
+	let projectVersion = process.env.npm_package_version;
+	return `${ projectName }_v${ projectVersion }`
 }
 
 module.exports = {
