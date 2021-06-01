@@ -1,4 +1,4 @@
-# manifestGenerator
+# ManifestGenerator
 
 This is a simple tool for generate manifestmd5.txt file for our product.
 
